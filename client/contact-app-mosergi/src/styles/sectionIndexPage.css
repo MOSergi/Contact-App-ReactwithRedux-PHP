@@ -1,0 +1,20 @@
+#indexSection {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #2b47e6;
+    color: white;
+    padding: 45px;
+}
+
+#indexDivSection {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: white;
+    border-radius:  0px 0px 190px 190px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    padding: 45px;
+}
