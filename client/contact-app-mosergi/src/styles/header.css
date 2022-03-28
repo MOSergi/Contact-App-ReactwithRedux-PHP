@@ -4,7 +4,35 @@
     justify-content: space-around;
     align-items: center;
     padding: 15px;
-    background-color: #2b47e6;
+    background-color: #328a53;
+}
+
+.Menu h3 .links {
+    font-size: 22px;
+    color: black;
+}
+
+.Menu img {
+    width: 95%;
+    margin: auto;
+    transition: width 1s;
+}
+
+.Menu img:hover {
+    width: 100%;
+}
+
+.Menu h3 .links:hover {
+    font-size: 25px;
+    color: white;
+}
+
+.Menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
 }
 
 .links {
@@ -12,6 +40,10 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+}
+
+ul .links {
+    margin-right: 10px;
 }
 
 .important {

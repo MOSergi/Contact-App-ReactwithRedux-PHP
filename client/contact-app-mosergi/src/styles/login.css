@@ -1,0 +1,24 @@
+#loginSec {
+    margin-top: 25px;
+}
+
+#loginSec form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#loginSec form input {
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#loginSec form button {
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
