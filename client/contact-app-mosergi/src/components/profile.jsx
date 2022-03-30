@@ -25,20 +25,19 @@ export default function Profile(){
     const navigate = useNavigate();
 
     useEffect(()=>{
-        //seolo hace la peticion si el usuario esta logueado
-        if (loginStatus == true){
-            fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/getUserData/getName.php", {
-            credentials : "include"
-            })
-            .then(response => response.json())
-            .then((data) => {
-                if (data != "No login"){
-                    setUsername(data);
-                }
-            })
-            .catch(error => console.log(error))
-        }
-    }, [loginStatus])
+        
+        fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/getUserData/getName.php", {
+        credentials : "include"
+        })
+        .then(response => response.json())
+        .then((data) => {
+            if (data != "No login"){
+                setUsername(data);
+            }
+        })
+        .catch(error => console.log(error))
+        
+    }, [])
 
     //logout user
 
