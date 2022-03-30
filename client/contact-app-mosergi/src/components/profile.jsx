@@ -58,7 +58,8 @@ export default function Profile(){
 
     //change username
 
-    const changeName = ()=>{
+    const changeName = (e)=>{
+        e.preventDefault();
         alert("Aun no esta disponible esta opcion");
     }
 
@@ -67,7 +68,7 @@ export default function Profile(){
             <h2>Bienvenido a tu perfil {username}</h2>
             <button onClick={()=>{logout()}}>Cerrar sesión</button>
             <h3>Opciones de cuenta</h3>
-            <form onSubmit={()=>{changeName()}}>
+            <form onSubmit={changeName}>
                 <p>Modificar tu nombre</p>
                 <input required type="text" placeholder={username}/>
                 <br />
