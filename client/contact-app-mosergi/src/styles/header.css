@@ -12,18 +12,8 @@
     color: black;
 }
 
-.Menu img {
-    width: 95%;
-    margin: auto;
-    transition: width 1s;
-}
-
-.Menu img:hover {
-    width: 100%;
-}
-
 .Menu h3 .links:hover {
-    font-size: 25px;
+    font-size: 24px;
     color: white;
 }
 
@@ -46,10 +36,26 @@ ul .links {
     margin-right: 10px;
 }
 
+.linksR {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ul .linksR {
+    margin-right: 10px;
+}
+
+ul .linksR:hover {
+    color: black;
+}
+
+
 .important {
     padding: 10px;
     text-align: center;
-    width: 80px;
+    width: 100px;
     background-color: rgb(46, 46, 46);
     color: white;
     border-radius: 5px;
@@ -57,6 +63,7 @@ ul .links {
 }
 
 .important:hover {
-    width: 100px;
+    width: 110px;
     padding: 12.5px;
 }
+

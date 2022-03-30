@@ -1,8 +1,15 @@
-import React from "react";
-import { useState } from "react";
-import {useDispatch} from "react-redux";
-import { noLogin, logedIn } from "../reduxActions/actions";
+//react imports
+import React, { useState } from "react";
+//css
 import "../styles/login.css";
+//react redux imports
+import {useDispatch} from "react-redux";
+import { logedIn } from "../reduxActions/actions";
+//react router usenavigate import
+import { useNavigate } from "react-router-dom";
+//custom hook import
+import { useValidateRoutesNoProtected } from "../customHooks/loginStatusValidate";
+
 
 export default function Login(){
 
@@ -11,6 +18,10 @@ export default function Login(){
 
     const dispatch = useDispatch();
 
+    const navigate = useNavigate();
+
+    useValidateRoutesNoProtected();
+
     const handeleSubmit = (event)=>{
         event.preventDefault();
         
@@ -18,7 +29,7 @@ export default function Login(){
         formadata.append("email", email);
         formadata.append("password", pass);
 
-        fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/auth/validateUser.php",{
+        fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/auth/loginUsers.php",{
             method: "POST",
             body: formadata,
             credentials : "include"
@@ -30,8 +41,8 @@ export default function Login(){
             } else if (datos == "Wrong username or password"){
                 alert(datos);
             } else if (datos == "Valid Password"){
-                alert(datos);
                 dispatch(logedIn);
+                navigate("/Profile");
             }
         })
         .catch(error => console.log(error))

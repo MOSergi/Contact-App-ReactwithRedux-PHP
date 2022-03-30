@@ -26,7 +26,7 @@
     color: #328a53;
 }
 
-#indexDivSection h3:first-child {
+#indexDivSection h3{
     width: 65%;
     text-align: center;
 }
@@ -62,5 +62,9 @@
 @media screen and (max-width: 900px){
     #indexDivSection img {
         width: 90%;
+    }
+
+    #indexDivSection h3{
+        width: 85%;
     }
 }

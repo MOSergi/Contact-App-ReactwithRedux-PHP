@@ -1,12 +1,17 @@
-import React from "react";
-import { useState } from "react";
+//react imports
+import React, { useState } from "react";
+//css
 import "../styles/register.css";
+//import custom hook
+import { useValidateRoutesNoProtected } from "../customHooks/loginStatusValidate";
 
 export default function Register(){
 
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [pass, setPass] = useState();
+
+    useValidateRoutesNoProtected();
 
     const handeleSubmit = (e)=>{
         e.preventDefault();
