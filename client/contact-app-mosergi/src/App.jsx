@@ -10,9 +10,9 @@ import Header from './components/header';
 import SectionIndexPage from './components/sectionIndexPage';
 import Register from './components/register';
 import Login from './components/login';
+import Profile from './components/profile';
 
 function App() {
-
 
   const store = createStore(loginReducer);
 
@@ -23,7 +23,7 @@ function App() {
           <Route path='/' element={<><Header /> <SectionIndexPage /></>}></Route>
           <Route path='/Register' element={<><Header /> <Register /></>}></Route>
           <Route path='/Login' element={<><Header /> <Login /></>}></Route>
-          <Route path="/Profile" element={<><Header /></>}></Route>
+          <Route path="/Profile" element={<><Header /> <Profile /></>}></Route>
           <Route path="/Contacts" element={<><Header /></>}></Route>
         </Routes>
       </Router>

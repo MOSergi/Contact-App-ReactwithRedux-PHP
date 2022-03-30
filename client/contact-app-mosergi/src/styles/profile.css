@@ -1,0 +1,38 @@
+.sectionProfile {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.sectionProfile button {
+    padding: 10px;
+    border-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sectionProfile button:hover {
+    padding: 12px;
+}
+
+.sectionProfile h3 {
+    color: #328A53;
+    font-size: 22px;
+}
+
+.sectionProfile p {
+    font-weight: bold;
+}
+
+.sectionProfile form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.sectionProfile input {
+    padding: 10px;
+    text-align: center;
+    width: 285px;
+}
