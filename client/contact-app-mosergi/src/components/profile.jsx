@@ -37,8 +37,6 @@ export default function Profile(){
         .catch(error => console.log(error))
     }
 
-    console.log("me actualizo");
-
     //change username
 
     const changeName = (e)=>{
