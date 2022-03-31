@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 //css
 import "../styles/profile.css";
 //import custoom hooks
-import { useValidateRoutesProtected } from "../customHooks/loginStatusValidate";
+import { useValidateRoutesProtected } from "../customHooks/useUsers";
 //react redux imports
 import { noLogin } from "../reduxActions/actions";
 import { useDispatch, useSelector} from "react-redux";
@@ -16,32 +16,13 @@ export default function Profile(){
     //custom hook validation
     useValidateRoutesProtected();
 
-    const [username, setUsername ] = useState("");
-
     const dispatch = useDispatch();
 
-    const loginStatus = useSelector(state => state);
+    const username = useSelector(state => state.userName);
 
     const navigate = useNavigate();
 
-    useEffect(()=>{
-        //solo se hace la peticion si el login status es true
-        if (loginStatus == true){
-            fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/getUserData/getName.php", {
-                credentials : "include"
-            })
-            .then(response => response.json())
-            .then((data) => {
-                if (data != "No login"){
-                    setUsername(data);
-                } 
-            })
-            .catch(error => console.log(error))
-        }
-    }, [loginStatus])
-
     //logout user
-
     const logout = ()=>{
         fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/auth/logout.php", {
             credentials : "include"
@@ -55,6 +36,8 @@ export default function Profile(){
         })
         .catch(error => console.log(error))
     }
+
+    console.log("me actualizo");
 
     //change username
 

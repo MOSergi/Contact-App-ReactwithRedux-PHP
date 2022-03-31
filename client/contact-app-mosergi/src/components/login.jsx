@@ -8,7 +8,7 @@ import { logedIn } from "../reduxActions/actions";
 //react router usenavigate import
 import { useNavigate } from "react-router-dom";
 //custom hook import
-import { useValidateRoutesNoProtected } from "../customHooks/loginStatusValidate";
+import { useValidateRoutesNoProtected } from "../customHooks/useUsers";
 
 
 export default function Login(){

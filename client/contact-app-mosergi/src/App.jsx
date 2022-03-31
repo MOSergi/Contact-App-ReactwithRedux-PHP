@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //react redux
 import { createStore } from "redux";
 import { Provider } from 'react-redux';
-import loginReducer from "./reducers/loginReducer.js";
+import rootReducer from "./reducers/rootReducer";
 //componentes
 import Header from './components/header';
 import SectionIndexPage from './components/sectionIndexPage';
@@ -14,7 +14,7 @@ import Profile from './components/profile';
 
 function App() {
 
-  const store = createStore(loginReducer);
+  const store = createStore(rootReducer);
 
   return (
     <Provider store={store}>

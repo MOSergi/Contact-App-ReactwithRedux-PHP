@@ -1,4 +1,4 @@
-function loginReducer(state = false, action){
+export default function loginReducer(state = false, action){
     if (action.type === "noLogin"){
         return state = action.loginStatus;
     } else if (action.type === "TrueLogin"){
@@ -7,5 +7,3 @@ function loginReducer(state = false, action){
         return state;
     }
 }
-
-export default loginReducer;

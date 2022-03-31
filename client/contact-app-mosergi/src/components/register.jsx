@@ -3,7 +3,7 @@ import React, { useState } from "react";
 //css
 import "../styles/register.css";
 //import custom hook
-import { useValidateRoutesNoProtected } from "../customHooks/loginStatusValidate";
+import { useValidateRoutesNoProtected } from "../customHooks/useUsers";
 
 export default function Register(){
 
