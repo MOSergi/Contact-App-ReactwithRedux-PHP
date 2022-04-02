@@ -4,14 +4,19 @@ import React, { useState } from "react";
 import "../styles/register.css";
 //import custom hook
 import { useValidateRoutesNoProtected } from "../customHooks/useUsers";
+//react router dom imports
+import { useNavigate } from "react-router-dom";
+
 
 export default function Register(){
+
+    useValidateRoutesNoProtected();
 
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [pass, setPass] = useState();
 
-    useValidateRoutesNoProtected();
+    const navigate = useNavigate();
 
     const handeleSubmit = (e)=>{
         e.preventDefault();
@@ -31,23 +36,7 @@ export default function Register(){
             if (data == "Invalid Email"){
                 alert("Email no válido");
             } else if (data == "Registered Sucessfully"){
-                let registerSec = document.getElementById("registerSec");
-                if (document.querySelector("#registeredSuccesful") != null){
-                    document.querySelector("#registeredSuccesful").textContent = "Registrado Correctamente";
-                    registerSec.children[0][0].value = "";
-                    registerSec.children[0][1].value = "";
-                    registerSec.children[0][2].value = "";
-                } else {
-                    let h2 = document.createElement("h2");
-                    h2.innerText = "Registro Correcto";
-                    h2.style.color = "green";
-                    h2.style.textAlign = "center";
-                    h2.setAttribute("id", "registeredSuccesful")
-                    registerSec.appendChild(h2);
-                    registerSec.children[0][0].value = "";
-                    registerSec.children[0][1].value = "";
-                    registerSec.children[0][2].value = "";
-                }
+                navigate("/Login");
             }
         })
         .catch(error => console.log(error))

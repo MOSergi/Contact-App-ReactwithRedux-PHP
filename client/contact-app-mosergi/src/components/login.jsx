@@ -13,14 +13,14 @@ import { useValidateRoutesNoProtected } from "../customHooks/useUsers";
 
 export default function Login(){
 
+    useValidateRoutesNoProtected();
+
     const [email, setEmail] = useState();
     const [pass, setPass] = useState();
 
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
-
-    useValidateRoutesNoProtected();
 
     const handeleSubmit = (event)=>{
         event.preventDefault();
