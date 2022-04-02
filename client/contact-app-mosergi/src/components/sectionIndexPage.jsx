@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import addNotes from "../resources/addNotes.png";
 //react redux imports
 import { useSelector, useDispatch } from "react-redux";
-import { logedIn } from "../reduxActions/actions";
+import { logedIn, noLogin } from "../reduxActions/actions";
 
 function SectionIndexPage(){
 
@@ -23,6 +23,8 @@ function SectionIndexPage(){
         .then((data) => {
             if (data == "LogedIn"){
                 dispatch(logedIn);
+            } else {
+                dispatch(noLogin);
             }
         })
         .catch(error => console.log(error))

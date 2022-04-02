@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 //react redux imports
 import { useDispatch, useSelector } from "react-redux";
-import { logedIn } from "../reduxActions/actions";
+import { logedIn, noLogin } from "../reduxActions/actions";
 
 export function useValidateRoutesProtected(){
 
@@ -17,6 +17,7 @@ export function useValidateRoutesProtected(){
         .then((data) =>  {
             if (data == "No Login"){
                 navigate("/Login");
+                dispatch(noLogin);
             } else {
                 fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/getUserData/getName.php", {
                     credentials : "include"
@@ -29,7 +30,6 @@ export function useValidateRoutesProtected(){
                     } 
                 })
                 .catch(error => console.log(error))
-                dispatch(logedIn);
             }
         })
         .catch(error => console.log(error))

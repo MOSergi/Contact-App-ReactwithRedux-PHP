@@ -11,6 +11,8 @@ import { FaHome, FaUserAlt, FaAddressBook, FaUserPlus, FaSignInAlt} from "react-
 
 export default function Header(){
 
+    console.log("soy header");
+
     const loginStatus = useSelector(state => state.loginStatus);
 
     if (loginStatus == false){

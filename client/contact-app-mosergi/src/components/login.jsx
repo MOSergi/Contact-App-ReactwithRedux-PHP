@@ -15,6 +15,8 @@ export default function Login(){
 
     useValidateRoutesNoProtected();
 
+    console.log("soy login");
+
     const [email, setEmail] = useState();
     const [pass, setPass] = useState();
 

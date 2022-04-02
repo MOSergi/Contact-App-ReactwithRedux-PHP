@@ -12,6 +12,8 @@ export default function Register(){
 
     useValidateRoutesNoProtected();
 
+    console.log("soy register");
+
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [pass, setPass] = useState();
@@ -36,6 +38,7 @@ export default function Register(){
             if (data == "Invalid Email"){
                 alert("Email no válido");
             } else if (data == "Registered Sucessfully"){
+                alert("Registro Correcto");
                 navigate("/Login");
             }
         })
