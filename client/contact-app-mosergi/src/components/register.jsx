@@ -12,8 +12,6 @@ export default function Register(){
 
     useValidateRoutesNoProtected();
 
-    console.log("soy register");
-
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [pass, setPass] = useState();

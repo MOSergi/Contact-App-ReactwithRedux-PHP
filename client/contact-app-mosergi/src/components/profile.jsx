@@ -22,8 +22,6 @@ export default function Profile(){
 
     const navigate = useNavigate();
 
-    console.log("soy profile");
-
     //logout user
     const logout = ()=>{
         fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/auth/logout.php", {
