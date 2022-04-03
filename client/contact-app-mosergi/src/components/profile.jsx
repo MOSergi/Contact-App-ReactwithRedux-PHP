@@ -1,5 +1,5 @@
 //react imports
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 //css
 import "../styles/profile.css";
 //import custoom hooks
@@ -22,6 +22,8 @@ export default function Profile(){
 
     const navigate = useNavigate();
 
+    const [newName, setNewName] = useState("");
+
     //logout user
     const logout = ()=>{
         fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/auth/logout.php", {
@@ -41,7 +43,24 @@ export default function Profile(){
 
     const changeName = (e)=>{
         e.preventDefault();
-        alert("Aun no esta disponible esta opcion");
+
+        let newNameFormdata = new FormData();
+        newNameFormdata.append("newName", newName);
+
+        fetch("http://localhost:5065/Contact-App-ReactwithRedux-PHP/server/insertData/changeName.php", {
+            method: "POST",
+            credentials : "include",
+            body : newNameFormdata
+        })
+        .then(response => response.json())
+        .then((data)=>{
+            if (data == "Valid auth"){
+                dispatch({ type : "setUsername", payload : newName });
+                alert("Nombre actualizado correctamente");
+                setNewName("");
+            }
+        })
+        .catch(error => console.log(error))
     }
 
     return(
@@ -51,7 +70,7 @@ export default function Profile(){
             <h3>Opciones de cuenta</h3>
             <form onSubmit={changeName}>
                 <p>Modificar tu nombre</p>
-                <input required type="text" placeholder={username}/>
+                <input onChange={(e)=> setNewName(e.target.value)} value={newName} required type="text" placeholder={username}/>
                 <br />
                 <button style={{marginTop : "10px"}}>Cambiar nombre</button>
             </form>

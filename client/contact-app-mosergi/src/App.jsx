@@ -11,6 +11,7 @@ import SectionIndexPage from './components/sectionIndexPage';
 import Register from './components/register';
 import Login from './components/login';
 import Profile from './components/profile';
+import Contacts from './components/contacts';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
           <Route path='/Register' element={<><Header /> <Register /></>}></Route>
           <Route path='/Login' element={<><Header /> <Login /></>}></Route>
           <Route path="/Profile" element={<><Header /> <Profile /></>}></Route>
-          <Route path="/Contacts" element={<><Header /></>}></Route>
+          <Route path="/Contacts" element={<><Header /><Contacts /></>}></Route>
         </Routes>
       </Router>
     </Provider>

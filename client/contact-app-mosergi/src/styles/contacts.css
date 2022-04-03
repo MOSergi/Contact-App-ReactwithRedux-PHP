@@ -1,0 +1,115 @@
+.AddC {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.AddContact {
+    padding: 10px;
+    border-style: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: padding 1s, font-size 1s, background-color 1s, color 1s;
+}
+
+.btnDisabled {
+    padding: 10px;
+    border-style: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.AddAwsme {
+    margin-left: 4px;
+}
+
+.AddContact:hover {
+    padding: 12px;
+    font-size: 17px;
+    background-color: #328A53;
+    color: white;
+}
+
+.AllContacts {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.AllContacts h2 {
+    text-align: center;
+    margin-top: 35px;
+    color: #328A53;
+}
+
+.FormNo {
+    display: none;
+}
+
+.FormYes {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sendContact {
+    padding: 10px;
+    border-style: none;
+    background-color: #328A53;
+    width: 200px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 1s, font-size 1s;
+}
+
+.sendContact:hover {
+    color: white;
+    font-size: 16px;
+}
+
+.AddC form {
+    margin-top: 25px;
+}
+
+.AddC form input {
+    padding: 10px;
+    text-align: center;
+    width: 285px;
+}
+
+.AddC form textarea {
+    padding: 10px;
+    text-align: center;
+}
+
+.Resultados {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+.Resultados div {
+    width: 310px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 5px gray;
+}
+
+
+
+.Resultados h3 {
+    color: black;
+    font-size: 22px;
+}
+
