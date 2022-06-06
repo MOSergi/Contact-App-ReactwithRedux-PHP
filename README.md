@@ -1,2 +1,3 @@
 # Contact-App-ReactwithRedux-PHP
-En este proyecto creo una app de contactos con React para el Frontend y php para el Backend. Tambien uso react-redux para gestionar estados globales
+
+In this project I create a contacts app with React for the Frontend and php for the Backend. I also use React-Redux to manage global states, although in this case it is only a test and the functionality does not go beyond a very basic example.
